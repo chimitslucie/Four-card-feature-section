@@ -28,8 +28,6 @@ body {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,6 +38,7 @@ body {
   max-width: 540px;
   width: 100%;
   text-align: center;
+  margin-top: 80px;
 }
 
 .card__head--tittle {
@@ -61,6 +60,8 @@ body {
   font-size: 15px;
   color: var(--grayish-blue);
   margin-top: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1px;
 }
 
 .card {
@@ -78,6 +79,7 @@ body {
   width: 100%;
   padding: 32px 32px;
   border-radius: 8px;
+  box-shadow: 0px 15px 30px var(--grayish-blue);
 }
 
 .card__supervisor.card__content {
@@ -115,4 +117,47 @@ body {
 .icon {
   max-width: 64px;
   margin-left: 222px;
+}
+
+@media (max-width: 375px) {
+  .card__head {
+    max-width: 311px;
+    margin-top: 85px;
+  }
+
+  .card__head--tittle {
+    font-size: 24px;
+    letter-spacing: 0.17px;
+  }
+
+  .card__head--text {
+    font-size: 24px;
+    letter-spacing: 0.17px;
+  }
+
+  .card {
+    margin-top: 76px;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 24px;
+  }
+
+  .card__content {
+    max-width: 311px;
+    padding: 27px 28px 28px 28px;
+  }
+
+  .card__karma.card__content {
+    border-top: 4px solid var(--orange);
+    margin-top: 24px;
+  }
+
+  .card__content--text {
+    margin: 6px auto 33px;
+  }
+
+  .icon {
+    max-width: 57px;
+    margin-left: 198px;
+  }
 }
